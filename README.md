@@ -9,6 +9,8 @@ This skeleton application was built for Composer. This makes setting up a new Sl
 ```
 composer install
 
-npm install
+npm install --save-dev
+
+
 
 ```
