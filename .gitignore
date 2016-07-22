@@ -1,3 +1,8 @@
 /vendor/
 /logs/*
 !/logs/README.md
+
+# Folders
+_obj
+_test
+node_modules
