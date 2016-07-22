@@ -7,11 +7,11 @@ This skeleton application was built for Composer. This makes setting up a new Sl
 * PHP using Slim framework
 * AngularJS for developing the frontend
 
-![Alt text](display.png?raw=true "SlimFramework (PHP) + Angular")
+![Alt text](display.png?raw=true "Slim Framework (PHP) + Angular")
 
 Pre-requisite:
 
-+ [SlimFramework](http://www.slimframework.com/)
++ [Slim Framework](http://www.slimframework.com/)
 + [Angular](https://angularjs.org/)
 + [Gulp](http://gulpjs.com/)
 + [Composer](https://getcomposer.org/)
