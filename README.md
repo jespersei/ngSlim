@@ -14,6 +14,7 @@ Pre-requisite:
 + [SlimFramework](http://www.slimframework.com/)
 + [Angular](https://angularjs.org/)
 + [Gulp](http://gulpjs.com/)
++ [Composer](https://getcomposer.org/)
  
 
 ## <a name="building"></a> Building
