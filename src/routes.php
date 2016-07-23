@@ -7,7 +7,7 @@ $app->get('[/]', function ($request, $response, $args) {
 
     $uri = $request->getUri();
 
-    $data = ['publicPath' => $uri->getBasePath(), 'devPath' =>  ];
+    $data = ['publicPath' => $uri->getBasePath()];
 
     // Render index view
     return $this->view->render($response, 'index.html', $data);
