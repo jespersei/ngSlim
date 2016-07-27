@@ -7,12 +7,12 @@ ngSlim.config(function($stateProvider, $urlRouterProvider, $locationProvider){
   //$urlRouterProvider.otherwise("/route1")
   
   $stateProvider
-    .state('route1', {
+    .state('about', {
         url: "/about",
         templateUrl: "pages/about.html"
     })
       
-    .state('route2', {
+    .state('contact', {
         url: "/contact",
         templateUrl: "pages/contact.html"
     })
