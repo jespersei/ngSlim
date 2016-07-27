@@ -1,25 +1,38 @@
-<html>
-  <head>
+<!DOCTYPE html>
+<html ng-app="ngSlim">
+
+<head>
+    <title>ngSlim : Angular JS Implementation over Slim Framework 3</title>
+    <!-- Bootstrap CSS -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.1/css/bootstrap.min.css" rel="stylesheet">
     <base href="/">
-    <title>Angular 2 QuickStart</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles.css">
+</head>
 
-    <!-- Polyfill(s) for older browsers -->
-    <script src="node_modules/core-js/client/shim.min.js"></script>
+<body class="container">
 
-    <script src="node_modules/zone.js/dist/zone.js"></script>
-    <script src="node_modules/reflect-metadata/Reflect.js"></script>
-    <script src="node_modules/systemjs/dist/system.src.js"></script>
+  <div class="navbar">
+    <div class="navbar-inner">
+      <a class="brand" href="#">ngSlim</a>
+      <ul class="nav">
+        <li><a ui-sref="route1">About</a></li>
+        <li><a ui-sref="route2">Contact</a></li>
+      </ul>
+    </div>
+  </div>
 
-    <script src="systemjs.config.js"></script>
-    <script>
-      System.import('app').catch(function(err){ console.error(err); });
-    </script>
-  </head>
+  <div class="row">
+    <div class="span12">
+      <div class="well" ui-view></div>        
+    </div>
+  </div>         
+  
+  <!-- Angular -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+  <!-- UI-Router -->
+  <script src="http://angular-ui.github.io/ui-router/release/angular-ui-router.min.js"></script>  
+  <!-- App Script -->
+  <script src="js/main.js"></script>
 
-  <body>
-    <my-app>Loading...</my-app>
-  </body>
+</body>
+
 </html>
