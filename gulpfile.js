@@ -2,13 +2,12 @@ var gulp = require("gulp"),
     watch = require("gulp-watch"),
     compressor = require("node-minify"),
     htmlmin = require("gulp-minify-html"),
-    // minify = require("gulp-cssnano"),
     concat = require("gulp-concat"),
     merge = require("merge-stream"),
     clean = require("gulp-clean"),
     path = require("path"),
-    minifyCss = require("gulp-minify-css");
-    //less = require("gulp-less")
+    minifyCss = require("gulp-minify-css")
+    less = require("gulp-less");
 
 gulp.task("watch", function() {
     gulp.watch(["assets/index.html"], function() {
@@ -18,7 +17,7 @@ gulp.task("watch", function() {
         gulp.start("modules");
     });
     gulp.watch("assets/js/**/*.js", function() {
-        gulp.start("js-vendors");
+        gulp.start("js-vendors");`
     });
     gulp.watch(["assets/modules/**/*.js"], function() {
         gulp.start("js-modules");
@@ -27,9 +26,9 @@ gulp.task("watch", function() {
         gulp.start("css");
         gulp.start("css-login");
     });
-    // gulp.watch("assets/css/less/main/*.css", function() {
-    //     gulp.start("css");
-    // });
+    gulp.watch("assets/css/less/main/*.css", function() {
+        gulp.start("css");
+    });
 });
 
 gulp.task("index", function() {

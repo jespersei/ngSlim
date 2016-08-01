@@ -1,0 +1,30 @@
+label {
+  color: #607D8B;
+  display: inline-block;
+  font-weight: bold;
+  margin: .5em 0;
+  width: 3em;
+}
+input {
+  font-size: 1em;
+  height: 2em;
+  padding-left: .4em;
+}
+button {
+  background-color: #eeeeee;
+  border-radius: 4px;
+  border: none;
+  cursor: hand;
+  cursor: pointer;
+  font-family: Arial;
+  margin-top: 20px;
+  padding: 5px 10px;
+}
+button:hover {
+  background-color: #cfd8dc;
+}
+button:disabled {
+  background-color: #eeeeee;
+  color: #cccccc;
+  cursor: auto;
+}

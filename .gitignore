@@ -6,3 +6,6 @@
 _obj
 _test
 node_modules
+templates/node_modules
+semantic
+semantic.json
