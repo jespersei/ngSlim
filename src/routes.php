@@ -12,3 +12,9 @@ $app->get('[/]', function ($request, $response, $args) {
     // Render index view
     return $this->view->render($response, 'index.html', $data);
 });
+
+$app->get('/api/testendpoint', function ($request, $response, $args) {
+	$data = array('name' => 'Bob', 'age' => 40);
+	$newResponse = $response->withJson($data, 201);
+	return $response;
+});
