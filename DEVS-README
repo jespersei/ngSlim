@@ -1,0 +1,50 @@
+DEVS-README
+
+====================
+
+Dev Environment Structure
+
+
+ngSlim/app
+- this is where the frontend scripts will reside (SCRIPTS ONLY)
+
+	app
+	|
+	|-lib
+	|
+	|-modules
+	__|--module_folder
+	____|--module_controllers, factories, etc
+	|
+	|-ng
+	app.js
+
+where:
+
+lib - contains all third party libraries outside angular (plain js and jquery)
+modules - contains all controllers and factories separated per module
+ng - contains all angular libraries and vendor packages
+
+app.js - initialization script 
+
+
+====================================================
+
+
+ngSlim/templates
+- contains all views
+--this is where all views will be coded. Upon deployment to Prod, all views here will be minified and transferred to "public/pages" folder
+
+**Please dont edit templates/index.php file, it is the one who calls and includes the minified index.html file
+
+
+=====================================================
+
+ngSlim/public/pages/
+-contains all minified html files
+
+ngSlim/public/index.html
+-minified html file which Slim calls, this is where all other requests are routed in order for Angular to handle it
+
+ngSlim/public/index.php
+-**Please do not remove or edit this file. this is the file that starts the Slim Framework and where requests are first routed to.
