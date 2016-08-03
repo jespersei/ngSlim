@@ -10,7 +10,7 @@ $app->get('[/]', function ($request, $response, $args) {
     $data = ['publicPath' => $uri->getBasePath()];
 
     // Render index view
-    return $this->view->render($response, 'index.html', $data);
+    return $this->view->render($response, 'index.php', $data);
 });
 
 $app->get('/api/testendpoint', function ($request, $response, $args) {
