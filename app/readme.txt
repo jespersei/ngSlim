@@ -1,0 +1,1 @@
+This is where all frontend assets and scripts will reside.

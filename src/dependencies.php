@@ -18,14 +18,17 @@ $container['logger'] = function ($c) {
     return $logger;
 };
 
-//Not Found Handler
+//Not Found Handler For Angular
 $container['notFoundHandler'] = function ($c) {
 
     //$c['view']->render($response, 'index.html', $args);
     return function ($request, $response) use ($c) {        
         $c['logger']->info("Not Found Handler triggered  (URI: ". $request->getUri() . ")");
-    	return $c['view']->render($response, 'index.html');
+    	
+        $uri = $request->getUri();
 
-        //return $c['response']->withStatus(404);
+        $data = ['publicPath' => $uri->getBasePath() ];
+
+        return $c['view']->render($response, 'index.html', $data);
     };
 }; 
