@@ -9,9 +9,9 @@ angular.module("ngSlim").config([
 
         $stateProvider
             .state("home", {
-                url: "/home",
+                url: "/",
                 controller: "mainController",
-                // controllerAs: "MainCtrl",
+                controllerAs: "vm",
                 templateUrl: "html/home/home.html"
             })
 

@@ -1,13 +1,8 @@
 var gulp        = require("gulp"),
     concat      = require("gulp-concat"),
     minifyCss   = require("gulp-minify-css"),
+    compass     = require("gulp-compass");
     sass        = require("gulp-sass");
-
-gulp.task("sass", function() {
-    return gulp.src("./app/assets/sass/main.scss")
-        .pipe(sass({ outputStyle: "compressed" }).on("error", sass.logError))
-        .pipe(gulp.dest("./app/assets/css"));
-});
 
 gulp.task("css", function() {
     return gulp.src([
@@ -24,4 +19,14 @@ gulp.task("css", function() {
         .pipe(minifyCss())
         .pipe(concat("styles.min.css"))
         .pipe(gulp.dest("./public/css/"));
+});
+ 
+gulp.task("compass", function() {
+  gulp.src("./app/assets/sass/main.scss")
+    .pipe(compass({
+      config_file: "./config.rb",
+      css: "./app/assets/css",
+      sass: "./app/assets/sass"
+    }))
+    .pipe(gulp.dest("./app/assets/css"));
 });

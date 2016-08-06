@@ -94,6 +94,7 @@ $(document).ready(function () {
             mapTypeId: google.maps.MapTypeId.ROADMAP
         }
         var map = new google.maps.Map(mapCanvas, mapOptions);
+        //alert("dumaan sa map");
     }
 
     google.maps.event.addDomListener(window, 'load', initialize);
@@ -108,4 +109,4 @@ $(document).ready(function () {
     $(window).load(function () {
         preloader.remove();
     });
-})
+});

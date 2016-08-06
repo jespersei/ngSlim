@@ -2,24 +2,21 @@
 
 var requireDir  = require("require-dir"),
     gulp        = require("gulp"),
-    watch       = require("gulp-watch"),
-    compressor  = require("node-minify"),
-    htmlmin     = require("gulp-minify-html"),
-    concat      = require("gulp-concat"),
-    merge       = require("merge-stream"),
-    clean       = require("gulp-clean"),
-    path        = require("path"),
-    minifyCss   = require("gulp-minify-css"),
-    sass        = require("gulp-sass");
+    watch       = require("gulp-watch");
 
-//requireDir('./gulp'); 
 requireDir('./gulp/tasks'); 
 requireDir('./gulp'); 
-
 // requireDir('./gulp/test.js'); 
 // requireDir('./gulp/deploy.js'); 
 
-gulp.task("default", ["html-index","html-modules","sass","css","js-vendors","js-modules"], function(){
+gulp.task("default", [
+        "html-index",
+        "html-modules",
+        "compass",
+        "css",
+        "js-vendors",
+        "js-modules"
+    ], function(){
 
     gulp.watch("./templates/index.html", ["html-index"]);
 
@@ -41,7 +38,7 @@ gulp.task("default", ["html-index","html-modules","sass","css","js-vendors","js-
     });
 
     gulp.watch("./app/assets/sass/**/*.scss", function() {
-        gulp.start("sass");
+        gulp.start("compass");
     });
 
 });

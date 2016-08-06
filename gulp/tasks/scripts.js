@@ -22,10 +22,11 @@ gulp.task("js-vendors", function() {
             "./app/ng/angular.min.js",
             "./app/ng/angular-ui-router.min.js",
             "./app/app.js",
-            "./app/ng/config/app.main.controller.js",
-            "./app/ng/config/app.main.factory.js",
             "./app/ng/config/app.routes.js",
-            "./app/ng/config/app.service.js"
+            "./app/ng/config/app.run.js",
+            "./app/ng/config/app.main.controller.js"
+            // "./app/ng/config/app.main.factory.js",
+            // "./app/ng/config/app.service.js",
         ],
         fileOut: "./public/js/vendors.min.js",
         callback: function(err, min) {
