@@ -17,11 +17,15 @@ angular.module("ngSlim").config([
 
         .state("about", {
             url: "/about",
+            controller: "aboutController",
+            controllerAs: "vm",
             templateUrl: "html/home/about.html"
         })
 
         .state("contact", {
-            url: "/contact",
+            url: "/contact",        
+            controller: "contactController",
+            controllerAs: "vm",
             templateUrl: "html/home/contact.html"
         })
 

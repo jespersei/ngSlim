@@ -8,7 +8,7 @@
 
 		/* jshint validthis: true */
         var vm = this;
-        vm.message = "Lorem ipsum dolor sit amet, consectetur adipisicing elit.";
+        vm.message = "Main: Lorem ipsum dolor sit amet, consectetur adipisicing elit.";
 
     }
 
