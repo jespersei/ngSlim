@@ -23,7 +23,7 @@ $container['notFoundHandler'] = function ($c) {
 
     //$c['view']->render($response, 'index.html', $args);
     return function ($request, $response) use ($c) {        
-        $c['logger']->info("Not Found Handler triggered  (URI: ". $request->getUri() . ")");
+        //$c['logger']->info("Not Found Handler triggered  (URI: ". $request->getUri() . ")");
     	
         $uri = $request->getUri();
 
