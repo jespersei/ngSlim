@@ -32,3 +32,27 @@ $container['notFoundHandler'] = function ($c) {
         return $c['view']->render($response, 'index.html', $data);
     };
 }; 
+
+
+// Service factory for the ORM
+$container['db'] = function ($container) {
+    $capsule = new \Illuminate\Database\Capsule\Manager;
+    $capsule->addConnection($container['settings']['dbslite']);
+
+    $capsule->setAsGlobal();
+    $capsule->bootEloquent();
+
+    return $capsule;
+};
+
+//Error Handler
+$container['errorHandler'] = function ($c) {
+    return function ($request, $response, $exception) use ($c) {
+        $returnData = array('success' => false, 'data' => ['msg' => 'Error Encountered']);
+        
+        $c['logger']->error($exception->getMessage() . '(URI: '. $request->getUri() .')');
+
+        return $c['response']->withStatus(500)
+                             ->withJson($returnData);
+    };
+};
