@@ -17,4 +17,11 @@
         "slim/php-view": "^2.0",
         "monolog/monolog": "^1.17"
     }
+    "autoload": {
+        "psr-4": {
+            "Controllers\\": "src/controllers/",
+            "Handlers\\": "src/handlers/",
+            "Models\\": "src/models/"
+        }
+    }
 }
