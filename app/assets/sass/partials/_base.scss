@@ -38,10 +38,24 @@ body  {
     margin-bottom: 40px;
 }
 
-.section-content{
-    height: 100%;
+#container {
+    padding: 40px 0;
 }
 
+canvas{
+    position: fixed;
+    z-index: 0;
+}
+section{
+    z-index: 10;
+}
+
+textarea{
+    color: $Dark-primary;
+}
+
+
+/* 
 
 #container {
     display: table; 
@@ -72,7 +86,7 @@ body  {
 #footer > div {
     height:50px; 
 }
-
+ */
 .jumbotron{
     margin-top: 5%;
     background-color: transparent !important;

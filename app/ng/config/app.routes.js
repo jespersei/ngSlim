@@ -29,13 +29,15 @@ angular.module("ngSlim").config([
             templateUrl: "html/contactus/contact.html"
         })
 
-        .state("services", {     
+        .state("services", {    
+            url: "/services",    
             controller: "servicesController",
             controllerAs: "vm",
             templateUrl: "html/services/services.html"
         })
 
-        .state("projects", {     
+        .state("projects", {   
+            url: "/projects",     
             controller: "projectsController",
             controllerAs: "vm",
             templateUrl: "html/projects/projects.html"
