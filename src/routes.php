@@ -29,11 +29,9 @@ $app->group('/sys/migrate', function () {
 
 //API Routes
 $app->group('/api', function () use ($app) {
-	$app->get('/testendpoint', function ($request, $response, $args) {
-		$data = array('name' => 'Bob', 'age' => 40);
-		$newResponse = $response->withJson($data, 201);
-		return $response;
-	});
+	
+	$this->post('/sendform', 'Controllers\HomeController:sendContactForm')
+		->setName('sendContactForm');
 
 	$app->group('/users', function () use ($app) {
 		return new Controllers\UserController($app);

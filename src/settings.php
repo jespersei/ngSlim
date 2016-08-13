@@ -30,6 +30,15 @@ return [
             'driver' => 'sqlite',
             'database' => __DIR__.'/../db/database.sqlite',
             'prefix'    => '',
+        ],
+
+        'mail' => [
+            'host'=> 'smtp.gmail.com',
+            'smtp_auth'=> true,
+            'username'=> 'magbutayperseus@gmail.com',
+            'password'=> 'Pewpew02!',
+            'smtp_secure'=> 'ssl',
+            'port'=> '465',
         ]
     ],
 ];

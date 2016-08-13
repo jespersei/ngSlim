@@ -11,6 +11,7 @@ class BaseController
     //Constructor
     public function __construct(ContainerInterface $ci) {
         $this->db = $ci['db'];
+        $this->mailer = $ci['mailer'];
     }
 	
 	protected function createResponse($response, $success = false, $data = [], $customHead = [])
