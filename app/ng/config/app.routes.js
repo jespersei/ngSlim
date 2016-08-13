@@ -19,14 +19,26 @@ angular.module("ngSlim").config([
             url: "/about",
             controller: "aboutController",
             controllerAs: "vm",
-            templateUrl: "html/home/about.html"
+            templateUrl: "html/about/about.html"
         })
 
         .state("contact", {
             url: "/contact",        
             controller: "contactController",
             controllerAs: "vm",
-            templateUrl: "html/home/contact.html"
+            templateUrl: "html/contactus/contact.html"
+        })
+
+        .state("services", {     
+            controller: "servicesController",
+            controllerAs: "vm",
+            templateUrl: "html/services/services.html"
+        })
+
+        .state("projects", {     
+            controller: "projectsController",
+            controllerAs: "vm",
+            templateUrl: "html/projects/projects.html"
         })
 
         .state("notfound", {

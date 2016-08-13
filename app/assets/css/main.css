@@ -2,16 +2,25 @@
 /* ==========================================================================
 Global Styles
 ========================================================================== */
+html,
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
-  color: #0d0d0d;
+  color: #fff;
   overflow-x: hidden;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background: url(../img/bg/003.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .sep {
   max-width: 80px;
-  border: 2px solid #0d0d0d;
+  border: 2px solid #fff;
   margin-top: 40px;
   margin-bottom: 40px;
 }
@@ -21,6 +30,57 @@ body {
   border: 2px solid #fff;
   margin-top: 40px;
   margin-bottom: 40px;
+}
+
+.section-content {
+  height: 100%;
+}
+
+#container {
+  display: table;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+#container > div {
+  display: table-row;
+  width: 100%;
+}
+
+#container > div > div {
+  display: table-cell;
+  width: 100%;
+}
+
+#header > div {
+  height: 50px;
+}
+
+#content > div {
+  height: 100%;
+  padding-top: 9%;
+}
+
+#footer > div {
+  height: 50px;
+}
+
+.jumbotron {
+  margin-top: 5%;
+  background-color: transparent !important;
+}
+.jumbotron .logo-main {
+  width: 40%;
+  margin-bottom: 7%;
+}
+
+.text-content {
+  width: 600px;
+  margin: 0 auto;
+}
+.text-content p {
+  line-height: 2em;
 }
 
 /* ==========================================================================
@@ -35,39 +95,39 @@ h1 {
 
 h2 {
   font-size: 36px;
-  color: #000;
+  color: #fff;
   font-weight: 400;
   letter-spacing: 0.05em;
 }
 
 h3 {
   font-size: 26px;
-  color: #000;
+  color: #fff;
   font-weight: 400;
 }
 
 h4 {
   font-size: 24px;
-  color: #000;
+  color: #fff;
   font-weight: 400;
 }
 
 h5 {
   font-size: 22px;
-  color: #000;
+  color: #fff;
   font-weight: 400;
 }
 
 h6 {
   font-size: 18px;
-  color: #000;
+  color: #fff;
   font-weight: 400;
   letter-spacing: 0.05em;
 }
 
 p {
   font-size: 16px;
-  color: #000;
+  color: #fff;
   font-weight: 400;
 }
 
@@ -79,9 +139,9 @@ Buttons Styles
   border: 3px solid #fff;
   padding: 15px 30px;
   font-size: 14px;
-  -moz-border-radius: 0;
-  -webkit-border-radius: 0;
-  border-radius: 0;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  border-radius: 7px;
   color: #fff;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
@@ -96,7 +156,7 @@ Buttons Styles
 .btn-transparent:focus,
 .btn-transparent:active {
   background: #fff;
-  color: #0d0d0d;
+  color: #fff;
   text-decoration: none;
 }
 
@@ -108,7 +168,7 @@ Buttons Styles
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
   border-radius: 0;
-  color: #0d0d0d;
+  color: #fff;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
@@ -141,14 +201,14 @@ Buttons Styles
   font-weight: 700;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  border: 3px solid #24242a;
+  border: 3px solid #fff;
 }
 
 .btn-block:hover,
 .btn-block:focus,
 .btn-block:active {
   background: #fff;
-  color: #0d0d0d;
+  color: #fff;
   text-decoration: none;
 }
 
@@ -163,11 +223,6 @@ Layout
   background: #fff;
 }
 
-/*.navbar-brand>img {
-    display: block;
-    height: 65px;
-    width: auto;
-}*/
     /* ==========================================================================
 Preloader Style
 ========================================================================== */
@@ -211,7 +266,7 @@ Navigation Style
 }
 .navbar-default .navbar-brand img {
   width: auto;
-  height: 62px;
+  height: 32px;
 }
 .navbar-default .nav-wrap {
   width: 50%;
@@ -221,7 +276,7 @@ Navigation Style
   color: #fff;
   font-weight: 700;
   text-transform: uppercase;
-  padding: 35px 15px;
+  padding: 20px;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
@@ -255,7 +310,7 @@ Navigation Style
 }
 .top-nav-collapse .navbar-brand img {
   width: auto;
-  height: 62px;
+  height: 32px;
 }
 .top-nav-collapse .nav > li > a {
   padding: 30px 15px;
@@ -498,11 +553,11 @@ Work Process Style
 }
 #work-process h4 {
   text-transform: uppercase;
-  color: #0d0d0d;
+  color: #fff;
 }
 #work-process span {
   font-size: 48px;
-  color: #0d0d0d;
+  color: #fff;
   margin-bottom: 15px;
 }
 
@@ -564,7 +619,7 @@ Our Team Style
   color: #a3a3a3;
 }
 #team .team a {
-  color: #0d0d0d;
+  color: #fff;
   font-size: 22px;
   padding-right: 10px;
   -moz-transition: all 0.3s ease-in-out;
@@ -657,7 +712,7 @@ Contact Us Style
   -webkit-border-radius: 0;
   border-radius: 0;
   border: 2px solid #24242a;
-  color: #0d0d0d;
+  color: #fff;
   min-height: 45px;
 }
 #contact textarea {
@@ -710,10 +765,39 @@ footer h6 {
     /* ==========================================================================
 Media Queries Style
 ========================================================================== */
+.jumbotron p {
+  font-size: 16px;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .jumbotron p {
+    font-size: 18px;
+  }
+}
+@media (min-width: 1024px) {
+  .jumbotron p {
+    font-size: 20px;
+  }
+}
+
+.jumbotron .text-content {
+  width: 300px;
+  margin: 0 auto;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .jumbotron .text-content {
+    width: 400px;
+  }
+}
+@media (min-width: 1024px) {
+  .jumbotron .text-content {
+    width: 600px;
+  }
+}
+
 @media (max-width: 992px) {
   /*-- Navigation --*/
   .navbar-default {
-    background: #24242a;
+    background: rgba(0, 0, 0, 0.7);
   }
   .navbar-default .navbar-header {
     width: 100%;
@@ -724,14 +808,14 @@ Media Queries Style
   }
   .navbar-default .navbar-header .navbar-brand img {
     width: auto;
-    height: 62px;
+    height: 32px;
   }
   .navbar-default .nav-wrap {
     width: 100%;
   }
   .navbar-default .navbar-toggle {
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding: 20px;
+    margin: 0px;
     border: none;
   }
   .navbar-default .navbar-toggle .icon-bar {
@@ -788,6 +872,10 @@ Media Queries Style
   /*-- section styles --*/
   section h2 {
     font-size: 32px;
+  }
+  section .jumbotron .logo-main {
+    width: 60%;
+    padding-top: 7%;
   }
 
   #testimonials h5 {

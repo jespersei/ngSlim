@@ -10,7 +10,7 @@ gulp.task("html-index", function() {
 });
 
 gulp.task("html-modules", function() {
-    return gulp.src(["./templates/modules/**/**/*.html"])
+    return gulp.src(["./app/modules/**/**/*.html"])
         .pipe(htmlmin({
             collapseWhitespace: true
         }))

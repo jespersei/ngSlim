@@ -20,7 +20,7 @@ gulp.task("default", [
 
     gulp.watch("./templates/index.html", ["html-index"]);
 
-    gulp.watch("./templates/modules/**/**/*.html", ["html-modules"]);
+    gulp.watch("./app/modules/**/**/*.html", ["html-modules"]);
 
     gulp.watch([
             "./app/assets/**/**/*.js",
