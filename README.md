@@ -37,6 +37,16 @@ Then run the **gulp** tasks:
 # To build minified version
 gulp build
 
+
+```
+
+Then run the **webserver in php** tasks:
+
+```bash
+# To run a webserver
+php -S localhost:8086 -t public public/index.php
+
+
 ```
 
 ## <a name="installing"></a> Installing Build (ngSlim)
