@@ -21,6 +21,13 @@ angular.module("ngSlim").config([
                 templateUrl: "html/login/login.html"
             })
 
+            .state("blog", {
+                url: "/blog",
+                controller: "blogController",
+                controllerAs: "vm",
+                templateUrl: "html/blog/blog.html"
+            })
+
             .state("about", {
                 url: "/about",
                 controller: "aboutController",

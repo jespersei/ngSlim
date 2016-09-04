@@ -4,6 +4,8 @@ var requireDir  = require("require-dir"),
     gulp        = require("gulp"),
     watch       = require("gulp-watch");
 
+const opn = require('opn');
+
 requireDir('./gulp/tasks'); 
 requireDir('./gulp'); 
 // requireDir('./gulp/test.js'); 
@@ -40,6 +42,8 @@ gulp.task("default", [
     gulp.watch("./app/assets/sass/**/*.scss", function() {
         gulp.start("compass");
     });
+
+    opn('http://localhost:8086/');
 
 });
 

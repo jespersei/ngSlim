@@ -3,5 +3,6 @@
 
 angular.module('ngSlim', [
 	"ui.router"
+	, "akoenig.deckgrid"
 ]);
 

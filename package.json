@@ -38,5 +38,8 @@
     "path": "^0.12.7",
     "require-dir": "^0.3.0",
     "uglify-js": "^2.7.0"
+  },
+  "dependencies": {
+    "opn": "^4.0.2"
   }
 }
